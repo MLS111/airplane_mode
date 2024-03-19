@@ -1,0 +1,12 @@
+<div>
+	<a href="{{ doc.route }}">{{ doc.title or doc.name }}</a>
+	<div class="card" style="width: 18rem;">
+		<img src="..." class="card-img-top" alt="...">
+		<div class="card-body">
+  <h5 class="card-title">{{ doc.title or doc.name }}</h5>
+  <p class="card-text">{{doc.source_airport_code}}->{{doc.destination_airport_code}}</p>
+  <p class="card-text">{{frappe.utils.format_date(doc.airplane_departure, "d MMMM, YYYY")}} | {{doc.time_of_departure}} | {{frappe.utils.format_duration(doc.duration)}}</p>
+  <a href="{{ doc.route }}" class="btn btn-primary">View Airplane</a>
+		</div>
+  </div>
+</div>
